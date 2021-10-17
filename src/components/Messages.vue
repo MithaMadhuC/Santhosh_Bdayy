@@ -93,6 +93,12 @@
                                     <h3>To be continued...</h3>
                                 </el-card>
                             </el-timeline-item> -->
+                             <el-timeline-item >
+                                <el-card>
+                                    <el-image :src="img7" @load="onImgLoad"></el-image>
+                                </el-card>
+                                <h3></h3>
+                            </el-timeline-item>
 
                         </el-timeline>
                     </transition>
@@ -115,6 +121,7 @@
     import img4 from '../assets/SanthoshTour.jpg'
     import img5 from '../assets/HappyFace.jpg'
     import img6 from '../assets/GoodBoyMode.png'
+    import img7 from '../assets/SanthoshPics.jpg'
 
     export default {
         name: "Messages",
@@ -130,6 +137,7 @@
                 img4: img4,
                 img5: img5,
                 img6: img6,
+                img7: img7,
                 imagesLoaded: 0,
                 // TODO : Modify this number (totalImages) to the images you use in the content
                 totalImages : 6,
