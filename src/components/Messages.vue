@@ -64,7 +64,7 @@
                             <el-timeline-item>
                                 <el-card>
                                     <el-image :src="img4" @load="onImgLoad"></el-image>
-                                    <h3>Tour - Sambavam - "CAMERA"</h3>
+                                    <h3>Tour - Sambavam - CAMERA</h3>
                                 </el-card>
                             </el-timeline-item>
 

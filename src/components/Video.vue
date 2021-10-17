@@ -1,7 +1,6 @@
 <template>
     <div class="video" >
-    <div  class="container">
-        <!-- Header -->
+            <!-- Header -->
         <el-row>
             <el-col :xs="2" :sm="2" :md="2" :lg="2" :xl="2">
                 <el-button @click="goBack()" class="back_button" type="danger" circle
@@ -17,16 +16,15 @@
                     <el-col :xs="16" :sm="16" :md="12" :lg="6" :xl="6">
                         <transition name="slide-fade">
                             <el-button class="home_button"
-                            @click.prevent="playSound('../assets/bdaysong.mp3')">
-                          
+                            @click.prevent="playSound()">                          
                                 Here You Go Santhosh..!!
+                                <audio id="myAudio" ref="audioElm" src="../assets/bdaysong.mp3"></audio>
                             </el-button>
                         </transition>
                     </el-col>
                 </el-row>
 
-    </div>
-
+   
 
     </div>
 </template>
@@ -44,12 +42,10 @@
                 this.$router.go(-1);
             },
 
-             playSound (sound) {
-      if(sound) {
-        var audio = new Audio(sound);
-        audio.play();
-      }
-    }
+             playSound: function () {
+             var myAudio= document.getElementById("myAudio")
+             return myAudio.paused ? myAudio.play() : myAudio.pause();
+            }
         }
     }
 </script>
